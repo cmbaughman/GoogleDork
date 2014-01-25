@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="hello">Hello World, MainActivity!</string>
-    <string name="app_name">GoogleDorks</string>
-
-</resources>
+	<resources>
+		<string name="app_name">Google Dorks</string>
+		<string name="rss_layout_urltext_text">http://rss.slashdot.org/Slashdot/slashdot</string>
+		<string name="rss_layout_statustext_text">Updating...</string>
+		<string name="rss_layout_download_text">Download</string>
+		<string name="dork_items_prompt">Choose a category</string>
+		<string-array name="dork_items">
+			<item>Files Containing Usernames</item>
+			<item>Files Containing Juicy Info</item>
+			<item>Files Containing Passwords</item>
+			<item>Various Connected Devices</item>
+			<item>Footholds</item>
+			<item>Online Shopping Info</item>
+		</string-array>
+	</resources>

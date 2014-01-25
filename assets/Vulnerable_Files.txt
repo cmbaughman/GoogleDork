@@ -1,0 +1,55 @@
+"create the Super User" "now by clicking here"
+"e107.org 2002/2003" inurl:forum_post.php?nt
+"File Upload Manager v1.3" "rename to"
+"Mail-it Now!" intitle:"Contact form" | inurl:contact.php
+"maxwebportal" inurl:"default" "snitz forums" +"homepage" -intitle:maxwebportal
+"Powered by FlexPHPNews" inurl:news | inurl:press
+"Powered by FunkBoard"
+"Powered by Gravity Board"
+"Powered by Land Down Under 601"
+"powered by mailgust"
+"powered by my little forum"
+"Powered by SilverNews"
+"Powered by Xcomic"
+"powered by YellDL"
+"Powered By: Simplicity oF Upload" inurl:download.php | inurl:upload.php
+"Warning:" "Cannot execute a blank command in"
+ext:asp "powered by DUForum" inurl:(messages|details|login|default|register) -site:duware.com
+ext:asp inurl:DUgallery intitle:"3.0" -site:dugall
+ext:cgi inurl:ubb6_test.cgi
+ezBOO "Administrator Panel" -cvs
+filetype:cgi inurl:cachemgr.cgi
+filetype:cnf my.cnf -cvs -example
+filetype:inc inc intext:setcookie
+filetype:lit lit (books|ebooks)
+filetype:mdb "standard jet" (password | username | user | pass)
+filetype:mdb inurl:"news/news"
+filetype:php inurl:"viewfile" -"index.php" -"idfil
+filetype:pl -intext:"/usr/bin/perl" inurl:webcal (inurl:webcal | inurl:add | inurl:delete | inurl:config)
+filetype:wsdl wsdl
+intitle:"ASP FileMan" Resend -site:iisworks.com
+intitle:"CJ Link Out V1"
+intitle:"Control panel" "Control Panel Login" ArticleLive inurl:admin -demo
+intitle:"Directory Listing" "tree view"
+intitle:"Index of /" modified php.exe
+intitle:"PHP Explorer" ext:php (inurl:phpexplorer.php |  inurl:list.php | inurl:browse.php)
+intitle:"phpremoteview" filetype:php "Name, Size,
+intitle:"PHPstat" intext:"Browser" intext:"PHPstat setup"
+intitle:"SSHVnc Applet"OR intitle:"SSHTerm Applet"
+intitle:gallery inurl:setup "Gallery configuration"
+intitle:mywebftp "Please enter your password"
+inurl:" WWWADMIN.PL" intitle:"wwwadmin"
+inurl:"nph-proxy.cgi" "Start browsing through this CGI-based proxy"
+inurl:"plog/register.php"
+inurl:"simplenews/admin"
+inurl:cartwiz/store/index.asp
+inurl:cgi-bin inurl:bigate.cgi
+inurl:cgi.asx?StoreID
+inurl:changepassword.cgi -cvs
+inurl:click.php intext:PHPClickLog
+inurl:guestbook/guestbooklist.asp "Post Date" From
+inurl:nquser.php filetype:php
+inurl:php.exe filetype:exe -example.com
+inurl:robpoll.cgi filetype:cgi
+inurl:updown.php | intext:"Powered by PHP Uploader Downloader"
+PHPFreeNews inurl:Admin.php

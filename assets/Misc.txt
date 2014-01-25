@@ -1,0 +1,45 @@
+"APC Console Port Management Server" intitle:"Console Port Management Server"
+"Cannot use a scalar value as an array in" "on line" -issues -help -problem
+"delivered by mailman" inurl:admin/mailman | intitle:"Mailman Administrator Authentication"
+"images in this album on"
+"Portal engine source code * copyright .... 2002-2004 * DotNetNuke." -site:dotnetnuke.com
+"powered by andromeda version" (filetype:php | filetype:asp)
+"Powered by AutoIndex PHP Script"
+"Powered by Caudium Webserver" -caudium.net
+"Status message received from" intitle:big brother
+"Thank you for your purchase" +download
+(intitle:"phpop: login")|(intext:"You have attempted an action that requires you to be authenticated.")|(intitle:"bookmarker: login")
+ext:log "Final encryption key"
+ext:log password END_FILE
+ext:nbe nbe
+ext:php program_listing intitle:MythWeb.Program.Listing
+filetype:myi myi -CVS
+filetype:php inurl:wiki (inurl:"SystemInfo" | inurl:FindPage| inurl:HelpContents| inurl:RecentChanges)
+filetype:xls inurl:"password.xls"
+intitle:" - Trend Micro Control Manager 3.0" intext:"User name"
+intitle:"CGIWrap Error: *"
+intitle:"HostMonitor log" | intitle:"HostMonitor report"
+intitle:"IBM HTTP Server" "Use the Administration Server to configure"
+intitle:"Owl Intranet " intext:"Owl Intranet Engine" +"Version:"  inurl:/intranet/ -edu -ac -gov -org
+intitle:"php upload to my ftp" "PHP Upload To My FTP"
+intitle:"Point. Click. Edit."
+intitle:"Powered by OneOrZero" intext:"Powered by OneOrZero v1.4" "login" inurl:helpdesk -demo -edu
+intitle:"Router Setup Home" Home Help Login Internet Status
+intitle:"ShowIt-Admin"
+intitle:"welcome to arcserve 7.0 advanced edition"
+intitle:big.brother attention trouble unavailable offline
+inurl:"/stCenter.nsf/" -demo
+inurl:"av_viewer.html" | inurl:"av_contents1.html" | inurl:"j_contents1.html" | inurl:"j_viewer.html" -site:altcode.com
+inurl:"login.php" "powered by WebChat"
+inurl:"wrapper/index.php?file_wrap"
+inurl:/cgi-nmis/nmiscgi.pl -edu -us -gov
+inurl:admin_/globalsettings.htm
+inurl:client_execute.cgi
+inurl:fingerprint.jsp -CVS -Mailing intext:Servlet+Engine
+inurl:happyaxis.jsp -CVS -Mailing
+inurl:x10/index.cgi
+linksys camera  inurl:main.cgi
+openbb "powered by open bulletin board " -1.0-6 -1.0-7 -1.0-8 -vulnerable
+powered.by.modIndex.0.0
+site:pictures.sprintpcs.com  "picture.do;jsessionid="
+welcome.to phpqladmin "Please login" -cvsweb

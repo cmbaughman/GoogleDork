@@ -1,0 +1,9 @@
+"More Info about MetaCart Free"
+intext:"powered by Hosting Controller" intitle:Hosting.Controller
+intext:"Powered by X-Cart: shopping cart software" -site:x-cart.com
+inurl:"/database/comersus.mdb"
+inurl:"shopadmin.asp" "Shop Administrators only"
+inurl:midicart.mdb
+inurl:shopdbtest.asp
+POWERED BY HIT JAMMER 1.0!
+site:ups.com intitle:"Ups Package tracking" intext:"1Z      "

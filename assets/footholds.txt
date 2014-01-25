@@ -1,0 +1,21 @@
+"adding new user" inurl:addnewuser -"there are no domains"
+"index of /" ( upload.cfm | upload.asp | upload.php | upload.cgi | upload.jsp | upload.pl )
+"Please re-enter your password It must match exactly"
+"Powered by PHPFM" filetype:php -username
+(intitle:"SHOUTcast Administrator")|(intext:"U SHOUTcast D.N.A.S. Status")
+(intitle:"WordPress ....... Setup Configuration File")|(inurl:"setup-config.php?step=")
+(inurl:81/cgi-bin/.cobalt/)  | (intext:"Welcome to the Cobalt RaQ")
++htpasswd +WS_FTP.LOG filetype:log
+filetype:php HAXPLORER "Server Files Browser"
+intitle:"ERROR: The requested URL could not be retrieved" "While trying to retrieve the URL" "The following error was encountered:"
+intitle:"net2ftp" "powered by net2ftp" inurl:ftp OR intext:login OR inurl:login
+intitle:"PHP Shell *" "Enable stderr" filetype:php
+intitle:"Web Data Administrator - Login"
+intitle:"YALA: Yet Another LDAP Administrator"
+intitle:admin intitle:login
+intitle:MyShell 1.1.0 build 20010923
+inurl:"phpOracleAdmin/php" -download -cvs
+inurl:"tmtrack.dll?"
+inurl:ConnectComputer/precheck.htm | inurl:Remote/logon.aspx
+inurl:polly/CP
+PHPKonsole PHPShell filetype:php -echo

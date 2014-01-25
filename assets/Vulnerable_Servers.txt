@@ -1,0 +1,46 @@
+"ftp://" "www.eastgame.net"
+"html allowed" guestbook
+"Powered by: vBulletin Version 1.1.5"
+"Select a database to view" intitle:"filemaker pro"
+"set up the administrator user" inurl:pivot
+"There are no Administrators Accounts" inurl:admin.php -mysql_fetch_row
+"Welcome to Administration" "General" "Local Domains" "SMTP Authentication" inurl:admin
+"Welcome to Intranet"
+"Welcome to PHP-Nuke" congratulations
+"Welcome to the Prestige Web-Based Configurator"
+"YaBB SE Dev Team"
+"you can now password" | "this is a special page only seen by you. your profile visitors"  inurl:imchaos
+("Indexed.By"|"Monitored.By") hAcxFtpScan
+(inurl:/shop.cgi/page=) | (inurl:/shop.pl/page=)
+allinurl:"index.php" "site=sglinks"
+allinurl:install/install.php
+allinurl:intranet admin
+filetype:cgi inurl:"fileman.cgi"
+filetype:cgi inurl:"Web_Store.cgi"
+filetype:php inurl:vAuthenticate
+filetype:pl intitle:"Ultraboard Setup"
+intext:"Warning: * am able * write ** configuration file" "includes/configure.php" -Forums
+intitle:"Gallery in Configuration mode"
+intitle:"Gateway Configuration Menu"
+intitle:"Horde :: My Portal" -"[Tickets"
+intitle:"Mail Server CMailServer Webmail" "5.2"
+intitle:"MvBlog powered"
+intitle:"Remote Desktop Web Connection"
+intitle:"Samba Web Administration Tool" intext:"Help Workgroup"
+intitle:"Terminal Services Web Connection"
+intitle:"Uploader - Uploader v6" -pixloads.com
+intitle:phpMyAdmin "Welcome to phpMyAdmin ***" "running on * as root@*"
+inurl:"/NSearch/AdminServlet"
+inurl:"index.php?module=ew_filemanager"
+inurl:aol*/_do/rss_popup?blogID=
+inurl:footer.inc.php
+inurl:info.inc.php
+inurl:ManyServers.htm
+inurl:newsdesk.cgi? inurl:"t="
+inurl:pls/admin_/gateway.htm
+inurl:rpSys.html
+inurl:search.php vbulletin
+inurl:servlet/webacc
+inurl:shop "Hassan Consulting's Shopping Cart Version 1.18"
+natterchat inurl:home.asp -site:natterchat.co.uk
+XOOPS Custom Installation

@@ -1,0 +1,60 @@
+"Directory Listing for" "Hosted by Xerver"
+"Index of /backup"
+"Index Of /network" "last modified"
+"index of cgi-bin"
+"index of" / picasa.ini
+"index of" inurl:recycler
+"Index of" rar r01 nfo Modified 2004
+"intitle:Index.Of /" stats merchant cgi-* etc
+"Powered by Invision Power File Manager" (inurl:login.php) | (intitle:"Browsing directory /" )
+"Warning: Installation directory exists at" "Powered by Zen Cart" -demo
+"Web File Browser" "Use regular expression"
+"Welcome to phpMyAdmin" " Create new database"
+"Welcome to the directory listing of" "NetworkActiv-Web-Server"
+allintitle:"FirstClass Login"
+allinurl:"/*/_vti_pvt/" | allinurl:"/*/_vti_cnf/"
+filetype:cfg ks intext:rootpw -sample -test  -howto
+filetype:ini Desktop.iniintext:mydocs.dll
+filetype:torrent torrent
+index.of.dcim
+index.of.password
+index.of.private
+index.of.protected
+index.of.secret
+index.of.secure
+index.of.winnt
+intext:"d.aspx?id" || inurl:"d.aspx?id"
+intext:"Powered By: TotalIndex" intitle:"TotalIndex"
+intitle:"album permissions" "Users who can modify photos" "EVERYBODY"
+intitle:"Backup-Management (phpMyBackup v.0.4 beta * )" -johnny.ihackstuff
+intitle:"Directory Listing For" intext:Tomcat -int
+intitle:"Folder Listing" "Folder Listing" Name Size Date/Time File Folder
+intitle:"HFS /" +"HttpFileServer"
+intitle:"Index of *" inurl:"my shared folder" size modified
+intitle:"Index of /CFIDE/" administrator
+intitle:"index of /phpmyadmin" modified
+intitle:"Index of c:\Windows"
+intitle:"index of" -inurl:htm -inurl:html mp3
+intitle:"index of" "parent directory" "desktop.ini" site:dyndns.org
+intitle:"Index of" cfide
+intitle:"index of" intext:"content.ie5"
+intitle:"index of" inurl:ftp (pub | incoming)
+intitle:"index.of.personal"
+intitle:"pictures thumbnails" site:pictures.sprintpcs.com
+intitle:"webadmin - /*" filetype:php directory filename permission
+intitle:index.of (inurl:fileadmin | intitle:fileadmin)
+intitle:index.of /AlbumArt_
+intitle:index.of /maildir/new/
+intitle:index.of abyss.conf
+intitle:index.of WEB-INF
+intitle:index.of.config
+intitle:intranet inurl:intranet +intext:"human resources"
+intitle:upload inurl:upload intext:upload -forum -shop -support -w3c
+inurl:/pls/sample/admin_/help/
+inurl:/tmp
+inurl:backup intitle:index.of inurl:admin
+inurl:explorer.cfm inurl:(dirpath|This_Directory)
+inurl:install.pl intext:"Reading path paramaters" -edu
+inurl:j2ee/examples/jsp
+inurl:ojspdemos
+log inurl:linklint filetype:txt -"checking"
