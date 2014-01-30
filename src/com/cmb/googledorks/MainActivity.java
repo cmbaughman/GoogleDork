@@ -18,7 +18,14 @@ public class MainActivity extends Activity
 	final GetGoogleDorks dorks = new GetGoogleDorks();
     ArrayAdapter<String> adapter;
 	List<String> list= null;
-
+	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflator = getMenuInflater();
+		inflator.inflate(R.menu.menu, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -90,6 +97,35 @@ public class MainActivity extends Activity
 				, "Opening http://google.com/#q=" + URLEncoder.encode(list.get(pos)), Toast.LENGTH_LONG).show();
 			}
 		});
-		
+    }
+	
+	/**
+     * On selecting action bar icons
+     * */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Take appropriate action for each action item click
+        switch (item.getItemId()) {
+			case R.id.action_search:
+				// search action
+				return true;
+			case R.id.action_location_found:
+				// location found
+				LocationFound();
+				return true;
+			case R.id.action_refresh:
+				// refresh
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+        }
+    }
+
+    /**
+     * Launching new activity
+     * */
+    private void LocationFound() {
+        Intent i = new Intent(MainActivity.this, LocationFound.class);
+        startActivity(i);
     }
 }
