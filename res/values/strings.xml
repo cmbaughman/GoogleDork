@@ -13,4 +13,7 @@
 			<item>Footholds</item>
 			<item>Online Shopping Info</item>
 		</string-array>
+		<string name="action_search">Search</string>
+		<string name="action_location_found">Location</string>
+		<string name="action_refresh">Refresh</string>
 	</resources>
