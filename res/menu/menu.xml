@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <!-- Search / will display always -->
-    <item android:id="@+id/action_search"
-		android:icon="@drawable/ic_action_search"
-		android:title="@string/action_search"
+    
+	<!-- Refresh -->
+    <item android:id="@+id/action_refresh"
+		android:icon="@drawable/ic_action_refresh"
+		android:title="@string/action_refresh"
+		android:showAsAction="ifRoom" />
+	
+	<!-- Search / will display always -->
+    <item android:id="@+id/action_share"
+		android:icon="@drawable/ic_action_share"
+		android:title="@string/action_share"
 		android:showAsAction="ifRoom"/>
 
     <!-- Location Found -->
@@ -11,10 +18,6 @@
 		android:icon="@drawable/ic_action_location_found"
 		android:title="@string/action_location_found"
 		android:showAsAction="ifRoom" />
+	
 
-    <!-- Refresh -->
-    <item android:id="@+id/action_refresh"
-		android:icon="@drawable/ic_action_refresh"
-		android:title="@string/action_refresh"
-		android:showAsAction="ifRoom" />
 </menu>
