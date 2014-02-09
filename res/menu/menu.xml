@@ -2,11 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     
 	<!-- Refresh -->
-    <item android:id="@+id/action_refresh"
-		android:icon="@drawable/ic_action_refresh"
-		android:title="@string/action_refresh"
-		android:showAsAction="ifRoom" />
-	
+    <group android:id="@+id/group1" android:enabled="true" android:menuCategory="container" android:visible="true">
+        <item android:id="@+id/settings" android:actionLayout="@layout/settings_activity" android:title="@string/action_settings" android:menuCategory="secondary" android:enabled="true" android:showAsAction="ifRoom"></item>
+    </group>
     <!-- Location Found -->
     <item android:id="@+id/action_help"
 		android:icon="@drawable/ic_action_help"
@@ -18,5 +16,6 @@
 		android:icon="@drawable/ic_action_share"
 		android:title="@string/action_share"
 		android:showAsAction="ifRoom"
-		android:actionProviderClass="android.widget.ShareActionProvider" />
+		android:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
+    
 </menu>

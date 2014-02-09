@@ -21,12 +21,16 @@ public class MainActivity extends Activity
     ArrayAdapter<String> adapter;
 	List<String> list= null;
 	private ShareActionProvider mShare;
-	
+	protected String dorkSelected = "";
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflator = getMenuInflater();
 		inflator.inflate(R.menu.menu, menu);
+		// Set up shareactionprovider
+		MenuItem shareItem = menu.findItem(R.id.action_share);
+		mShare = (ShareActionProvider)shareItem.getActionProvider();
+		mShare.setShareIntent(getShareItem());
 		return super.onCreateOptionsMenu(menu);
 	}
     /** Called when the activity is first created. */
@@ -83,6 +87,17 @@ public class MainActivity extends Activity
             }
         });
         
+        listV.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> arg0, View view,
+					int pos, long arg3) {
+					dorkSelected = list.get(pos).toString();
+				return false;
+			}
+        	
+		});
+        
 		listV.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int pos, long idt) {
@@ -109,7 +124,7 @@ public class MainActivity extends Activity
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
         switch (item.getItemId()) {
-			case R.id.action_refresh:
+			case R.id.settings:
 				// search action
 				Intent intent_settings = new Intent(this, SettingsActivity.class);
 				this.startActivity(intent_settings);
@@ -119,9 +134,6 @@ public class MainActivity extends Activity
 				ShowHelp sh = new ShowHelp(this);
 				sh.setTitle("About Google Dorks by CMB");
 				sh.show();
-				return true;
-			case R.id.action_share:
-				mShare = (ShareActionProvider)item.getActionProvider();
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
@@ -134,5 +146,19 @@ public class MainActivity extends Activity
     private void ShowShare() {
         Intent i = new Intent(MainActivity.this, ShowHelp.class);
         startActivity(i);
+    }
+    
+    private void setShareIntent(Intent shareIntent) {
+    	if (mShare != null) {
+    		mShare.setShareIntent(shareIntent);
+    	}
+    }
+    
+    private Intent getShareItem() {
+    	Intent inten = new Intent(Intent.ACTION_SEND);
+    	inten.putExtra(Intent.EXTRA_TEXT, dorkSelected);
+    	inten.setType("text/plain");
+    	
+    	return inten;
     }
 }
