@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    
-	<!-- Refresh -->
-    <group android:id="@+id/group1" android:enabled="true" android:menuCategory="container" android:visible="true">
-        <item android:id="@+id/settings" android:actionLayout="@layout/settings_activity" android:title="@string/action_settings" android:menuCategory="secondary" android:enabled="true" android:showAsAction="ifRoom"></item>
-    </group>
-    <!-- Location Found -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:GoogleDorks="http://schemas.android.com/apk/res-auto">
+	
     <item android:id="@+id/action_help"
 		android:icon="@drawable/ic_action_help"
 		android:title="@string/action_help"
@@ -15,7 +11,7 @@
     <item android:id="@+id/action_share"
 		android:icon="@drawable/ic_action_share"
 		android:title="@string/action_share"
-		android:showAsAction="ifRoom"
-		android:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
+		GoogleDorks:showAsAction="always"
+		GoogleDorks:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
     
 </menu>

@@ -2,7 +2,10 @@ package com.cmb.googledorks;
 
 import android.app.*;
 import android.os.*;
-import android.view.*;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.*;
 import android.view.View.*;
 import java.util.*;
@@ -10,6 +13,8 @@ import android.widget.AdapterView.*;
 import java.net.*;
 import android.content.*;
 import android.net.*;
+import android.support.v4.view.*;
+import android.support.v7.widget.ShareActionProvider;
 
 public class MainActivity extends Activity
 {
@@ -25,11 +30,9 @@ public class MainActivity extends Activity
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflator = getMenuInflater();
-		inflator.inflate(R.menu.menu, menu);
-		// Set up shareactionprovider
+		getMenuInflater().inflate(R.menu.menu, menu);
 		MenuItem shareItem = menu.findItem(R.id.action_share);
-		mShare = (ShareActionProvider)shareItem.getActionProvider();
+		mShare = (android.support.v7.widget.ShareActionProvider)MenuItemCompat.getActionProvider(shareItem);
 		mShare.setShareIntent(getShareItem());
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -88,14 +91,16 @@ public class MainActivity extends Activity
         });
         
         listV.setOnItemLongClickListener(new OnItemLongClickListener() {
-
 			@Override
 			public boolean onItemLongClick(AdapterView<?> arg0, View view,
 					int pos, long arg3) {
 					dorkSelected = list.get(pos).toString();
-				return false;
+					Intent inten = new Intent(Intent.ACTION_SEND);
+					inten.putExtra(Intent.EXTRA_TEXT, dorkSelected);
+					inten.setType("text/plain");
+					setShareIntent(inten);
+					return false;
 			}
-        	
 		});
         
 		listV.setOnItemClickListener(new OnItemClickListener() {
@@ -124,11 +129,6 @@ public class MainActivity extends Activity
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
         switch (item.getItemId()) {
-			case R.id.settings:
-				// search action
-				Intent intent_settings = new Intent(this, SettingsActivity.class);
-				this.startActivity(intent_settings);
-				return true;
 			case R.id.action_help:
 				// location found
 				ShowHelp sh = new ShowHelp(this);
@@ -156,9 +156,8 @@ public class MainActivity extends Activity
     
     private Intent getShareItem() {
     	Intent inten = new Intent(Intent.ACTION_SEND);
-    	inten.putExtra(Intent.EXTRA_TEXT, dorkSelected);
-    	inten.setType("text/plain");
-    	
+		inten.setType("image/*");
+		
     	return inten;
     }
 }
