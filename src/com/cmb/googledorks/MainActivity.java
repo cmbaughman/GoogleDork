@@ -16,6 +16,8 @@ public class MainActivity extends Activity
     Spinner catSpin;
 	ListView listV;
 	final GetGoogleDorks dorks = new GetGoogleDorks();
+	final public int ABOUT = 0;
+	
     ArrayAdapter<String> adapter;
 	List<String> list= null;
 	
@@ -106,14 +108,16 @@ public class MainActivity extends Activity
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
         switch (item.getItemId()) {
-			case R.id.action_search:
+			case R.id.action_refresh:
 				// search action
 				return true;
-			case R.id.action_location_found:
+			case R.id.action_help:
 				// location found
-				LocationFound();
+				ShowHelp sh = new ShowHelp(this);
+				sh.setTitle("About Google Dorks by CMB");
+				sh.show();
 				return true;
-			case R.id.action_refresh:
+			case R.id.action_share:
 				// refresh
 				return true;
 			default:
@@ -124,8 +128,8 @@ public class MainActivity extends Activity
     /**
      * Launching new activity
      * */
-    private void LocationFound() {
-        Intent i = new Intent(MainActivity.this, LocationFound.class);
+    private void ShowShare() {
+        Intent i = new Intent(MainActivity.this, ShowHelp.class);
         startActivity(i);
     }
 }

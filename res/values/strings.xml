@@ -14,6 +14,9 @@
 			<item>Online Shopping Info</item>
 		</string-array>
 		<string name="action_search">Search</string>
-		<string name="action_location_found">Location</string>
+		<string name="action_help">Help</string>
 		<string name="action_refresh">Refresh</string>
+		<string name="action_about">About</string>
+		<string name="action_share">Share</string>
+		
 	</resources>
