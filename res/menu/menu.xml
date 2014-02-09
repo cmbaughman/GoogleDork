@@ -13,9 +13,10 @@
 		android:title="@string/action_help"
 		android:showAsAction="ifRoom" />
 	
-	<!-- Search / will display always -->
+	<!-- Share / will display always -->
     <item android:id="@+id/action_share"
 		android:icon="@drawable/ic_action_share"
 		android:title="@string/action_share"
-		android:showAsAction="ifRoom"/>
+		android:showAsAction="ifRoom"
+		android:actionProviderClass="android.widget.ShareActionProvider" />
 </menu>

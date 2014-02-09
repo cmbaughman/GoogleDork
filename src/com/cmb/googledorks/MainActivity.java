@@ -20,6 +20,7 @@ public class MainActivity extends Activity
 	
     ArrayAdapter<String> adapter;
 	List<String> list= null;
+	private ShareActionProvider mShare;
 	
 	
 	@Override
@@ -110,6 +111,8 @@ public class MainActivity extends Activity
         switch (item.getItemId()) {
 			case R.id.action_refresh:
 				// search action
+				Intent intent_settings = new Intent(this, SettingsActivity.class);
+				this.startActivity(intent_settings);
 				return true;
 			case R.id.action_help:
 				// location found
@@ -118,7 +121,7 @@ public class MainActivity extends Activity
 				sh.show();
 				return true;
 			case R.id.action_share:
-				// refresh
+				mShare = (ShareActionProvider)item.getActionProvider();
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
