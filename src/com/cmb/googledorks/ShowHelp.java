@@ -11,7 +11,6 @@ import android.text.Html;
 import android.text.util.Linkify;
 import android.graphics.Color;
 import android.widget.TextView;
-import android.content.res.*;
 
 public class ShowHelp extends Dialog
 {

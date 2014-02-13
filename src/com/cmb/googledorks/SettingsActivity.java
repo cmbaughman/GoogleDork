@@ -2,9 +2,6 @@ package com.cmb.googledorks;
 
 import android.app.*;
 import android.os.*;
-import android.view.*;
-import android.widget.*;
-import android.view.View.*;
 
 public class SettingsActivity extends Activity
 {

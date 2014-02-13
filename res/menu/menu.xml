@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:GoogleDorks="http://schemas.android.com/apk/res-auto">
+	xmlns:support="http://schemas.android.com/apk/res-auto">
 	
     <item android:id="@+id/action_help"
 		android:icon="@drawable/ic_action_help"
 		android:title="@string/action_help"
-		android:showAsAction="ifRoom" />
+		support:showAsAction="ifRoom" />
 	
 	<!-- Share / will display always -->
     <item android:id="@+id/action_share"
 		android:icon="@drawable/ic_action_share"
 		android:title="@string/action_share"
-		GoogleDorks:showAsAction="always"
-		GoogleDorks:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
+		support:showAsAction="always"
+		support:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
     
 </menu>

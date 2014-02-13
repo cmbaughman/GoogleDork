@@ -2,31 +2,33 @@ package com.cmb.googledorks;
 
 import android.app.*;
 import android.os.*;
+import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
-import android.view.View.*;
 import java.util.*;
 import android.widget.AdapterView.*;
+
+import java.io.UnsupportedEncodingException;
 import java.net.*;
 import android.content.*;
 import android.net.*;
 import android.support.v4.view.*;
 import android.support.v7.widget.ShareActionProvider;
 
-public class MainActivity extends Activity
+public class MainActivity extends Activity implements Constants
 {
     Spinner catSpin;
 	ListView listV;
 	final GetGoogleDorks dorks = new GetGoogleDorks();
-	final public int ABOUT = 0;
+	public final String TAG = "MainActivity";
 	
     ArrayAdapter<String> adapter;
 	List<String> list= null;
 	private ShareActionProvider mShare;
 	protected String dorkSelected = "";
+	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -43,6 +45,8 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);    
         setContentView(R.layout.main);
 		
+        if (BuildConfig.DEBUG) { Log.d(TAG, LOG + " onCreate Called"); }
+        
 		listV = (ListView)findViewById(R.id.listBox);
         catSpin = (Spinner)findViewById(R.id.catSpin);
 		
@@ -86,7 +90,7 @@ public class MainActivity extends Activity
             
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                //required implememt 
+                //required to implement 
             }
         });
         
@@ -106,18 +110,22 @@ public class MainActivity extends Activity
 		listV.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int pos, long idt) {
+				Uri uuri = null;
 				if(list.get(pos).toString().startsWith("http")) {
-					startActivity(new Intent(Intent.ACTION_VIEW, 
-						Uri.parse(list.get(pos))));
+					uuri = Uri.parse(list.get(pos).toString());
+					startActivity(new Intent(Intent.ACTION_VIEW, uuri));
 				}
 				else {
-					startActivity(new Intent(Intent.ACTION_VIEW, 
-						Uri.parse("http://www.google.com/#q=" 
-						+ URLEncoder.encode(list.get(pos)))));
+					try {
+						uuri = Uri.parse("http://www.google.com/#q=" + URLEncoder.encode(list.get(pos), "UTF-8"));
+					}
+					catch(UnsupportedEncodingException uex) {
+						Log.e(TAG, LOG, uex);
+					}
+					startActivity(new Intent(Intent.ACTION_VIEW, uuri));
 				}
 				
-				Toast.makeText(getBaseContext()
-				, "Opening http://google.com/#q=" + URLEncoder.encode(list.get(pos)), Toast.LENGTH_LONG).show();
+				Toast.makeText(getBaseContext(), uuri.toString(), Toast.LENGTH_LONG).show();
 			}
 		});
     }
@@ -139,14 +147,6 @@ public class MainActivity extends Activity
 				return super.onOptionsItemSelected(item);
         }
     }
-
-    /**
-     * Launching new activity
-     * */
-    private void ShowShare() {
-        Intent i = new Intent(MainActivity.this, ShowHelp.class);
-        startActivity(i);
-    }
     
     private void setShareIntent(Intent shareIntent) {
     	if (mShare != null) {
@@ -157,7 +157,6 @@ public class MainActivity extends Activity
     private Intent getShareItem() {
     	Intent inten = new Intent(Intent.ACTION_SEND);
 		inten.setType("image/*");
-		
     	return inten;
     }
 }

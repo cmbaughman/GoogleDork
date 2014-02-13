@@ -1,11 +1,6 @@
 package com.cmb.googledorks;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.*;
-import org.xml.sax.*;
 import android.content.*;
 import java.io.*;
 import android.content.res.*;
