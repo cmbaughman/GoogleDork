@@ -6,7 +6,7 @@
     android:installLocation="auto">
 
     <uses-sdk 
-        android:minSdkVersion="11" 
+        android:minSdkVersion="14" 
         android:targetSdkVersion="19" />
 
     <application

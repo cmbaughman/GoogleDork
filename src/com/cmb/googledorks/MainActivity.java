@@ -15,7 +15,7 @@ import java.net.*;
 import android.content.*;
 import android.net.*;
 import android.support.v4.view.*;
-import android.support.v7.widget.ShareActionProvider;
+import android.widget.ShareActionProvider;
 
 public class MainActivity extends Activity implements Constants
 {
@@ -27,17 +27,16 @@ public class MainActivity extends Activity implements Constants
     ArrayAdapter<String> adapter;
 	List<String> list= null;
 	private ShareActionProvider mShare;
-	protected String dorkSelected = "";
+	protected String dorkSelected = "Nothing selected to share";
 	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.menu, menu);
-		MenuItem shareItem = menu.findItem(R.id.action_share);
-		mShare = (android.support.v7.widget.ShareActionProvider)MenuItemCompat.getActionProvider(shareItem);
-		mShare.setShareIntent(getShareItem());
-		return super.onCreateOptionsMenu(menu);
+		mShare = (ShareActionProvider)menu.findItem(R.id.action_share).getActionProvider();
+		return true;
 	}
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -100,8 +99,8 @@ public class MainActivity extends Activity implements Constants
 					int pos, long arg3) {
 					dorkSelected = list.get(pos).toString();
 					Intent inten = new Intent(Intent.ACTION_SEND);
-					inten.putExtra(Intent.EXTRA_TEXT, dorkSelected);
 					inten.setType("text/plain");
+					inten.putExtra(Intent.EXTRA_TEXT, dorkSelected);
 					setShareIntent(inten);
 					return false;
 			}
@@ -142,10 +141,14 @@ public class MainActivity extends Activity implements Constants
 				ShowHelp sh = new ShowHelp(this);
 				sh.setTitle("About Google Dorks by CMB");
 				sh.show();
-				return true;
+				break;
+			case R.id.action_share:
+				getShareItem();
+				break;
 			default:
-				return super.onOptionsItemSelected(item);
+				break;
         }
+        return super.onOptionsItemSelected(item);
     }
     
     private void setShareIntent(Intent shareIntent) {
@@ -156,7 +159,9 @@ public class MainActivity extends Activity implements Constants
     
     private Intent getShareItem() {
     	Intent inten = new Intent(Intent.ACTION_SEND);
-		inten.setType("image/*");
+    	inten.setType("text/plain");
+		inten.putExtra(Intent.EXTRA_TEXT, dorkSelected);
+		mShare.setShareIntent(inten);
     	return inten;
     }
 }
