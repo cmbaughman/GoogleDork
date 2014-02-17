@@ -14,7 +14,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.*;
 import android.content.*;
 import android.net.*;
-import android.support.v4.view.*;
 import android.widget.ShareActionProvider;
 
 public class MainActivity extends Activity implements Constants
