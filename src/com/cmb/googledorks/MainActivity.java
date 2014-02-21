@@ -2,6 +2,7 @@ package com.cmb.googledorks;
 
 import android.app.*;
 import android.os.*;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,11 +13,14 @@ import android.widget.AdapterView.*;
 
 import java.io.UnsupportedEncodingException;
 import java.net.*;
+
+import com.cmb.common.SimpleListViewFragment;
+
 import android.content.*;
 import android.net.*;
 import android.widget.ShareActionProvider;
 
-public class MainActivity extends Activity implements Constants
+public class MainActivity extends FragmentActivity implements Constants
 {
     Spinner catSpin;
 	ListView listV;
@@ -51,6 +55,7 @@ public class MainActivity extends Activity implements Constants
         list = dorks.getFeed(getBaseContext());
         adapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_list_item_1, list);
 		listV.setAdapter(adapter);
+		listV.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
         
         catSpin.setOnItemSelectedListener(new OnItemSelectedListener(){
             @Override
@@ -163,4 +168,10 @@ public class MainActivity extends Activity implements Constants
 		mShare.setShareIntent(inten);
     	return inten;
     }
+
+	public void onListItemClick(SimpleListViewFragment simpleListViewFragment,
+			int position) {
+		// TODO Auto-generated method stub
+		
+	}
 }
